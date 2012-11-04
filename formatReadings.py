@@ -1,8 +1,12 @@
 '''
-Form_lstat accelerometer data so that it is easy to
+Format accelerometer data so that it is easy to
 input to MATLAB. Gather statistics such as mean values,
 min, max, range, and vector sum.
+
+By James Velasco and Brian Mo
+Same Level Software
 '''
+
 import math
 
 def get_time(time):
@@ -87,11 +91,10 @@ count_file.truncate()
 
 out_file = open("/Users/james/Dropbox/SFU Courses/CMPT 275/accelerometer data/accelData" + count, "w")
 comment = input("Enter comment: ")
-#out_file.write("% Date: " + date + "\n% Test Duration: " + duration[0] + ' - ' + duration[len(duration)-1])
 out_file.write("% Date: {0}\n% Test Duration: {1} - {2}\n".format(date, duration[0], duration[len(duration)-1]))
 out_file.write("% Comment:" + comment + "\n\n")
-out_file.write("% Statistics:\n")
 
+out_file.write("% Statistics:\n")
 heading = "%{0:^25} {1:^25} {2:^25} {3:^25} {4:^25}\n".format('Mean', 'Min', 'Max', 'Range', 'Std.Dev')
 stat_format_x = "% X: {0: <25} {1: <25} {2: <25} {3: <25} {4: <25}\n".format(mean_x, min_x, max_x, range_x, std_dev_x)
 stat_format_y = "% Y: {0: <25} {1: <25} {2: <25} {3: <25} {4: <25}\n".format(mean_y, min_y, max_y, range_y, std_dev_y)
