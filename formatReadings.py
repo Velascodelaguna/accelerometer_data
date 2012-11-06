@@ -78,7 +78,7 @@ time_txt = "t = " + str(seconds) + ";\n\n"
 x_txt = "x ="+ str(x_lst) + ";\n\n"
 y_txt = "y ="+ str(y_lst) + ";\n\n"
 z_txt = "z ="+ str(z_lst) + ";\n\n"
-vector_sum_txt = "vs =" + str(vector_sum) + ";"
+vector_sum_txt = "vs =" + str(vector_sum) + ";\n"
 
 
 # Increment the number in count.txt and overwrite the file
